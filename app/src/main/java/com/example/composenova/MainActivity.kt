@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -23,16 +24,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeNovaTheme {
-                Row(
+                Box(
                     modifier = Modifier.fillMaxSize(),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center
                 ) {
 
                     Text(
                         modifier = Modifier
                             .background(Color(0xFFE91E63))
-                            .padding(16.dp),
+                            .padding(16.dp)
+                            .align(Alignment.BottomEnd),
                         text = "Hello Compose",
                         color = Color(0xFF2196F3),
                         fontSize = 30.sp,
