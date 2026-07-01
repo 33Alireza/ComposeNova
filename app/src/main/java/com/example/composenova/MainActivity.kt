@@ -4,18 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Text
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.res.painterResource
 import com.example.composenova.ui.theme.ComposeNovaTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,29 +17,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeNovaTheme {
-                Box(
-                    modifier = Modifier.fillMaxSize(),
-                ) {
-
-                    Text(
-                        modifier = Modifier
-                            .background(Color(0xFFE91E63))
-                            .padding(16.dp)
-                            .align(Alignment.BottomEnd),
-                        text = "Hello Compose",
-                        color = Color(0xFF2196F3),
-                        fontSize = 30.sp,
-                    )
-
-                    Text(
-                        modifier = Modifier
-                            .background(Color(0xFFE91E63))
-                            .padding(16.dp),
-                        text = "Hello Android",
-                        color = Color(0xFF2196F3),
-                        fontSize = 30.sp,
-                    )
-                }
+                Image(
+                    modifier = Modifier.background(Color(0xFF4CAF50)),
+                    painter = painterResource(R.drawable.ic_launcher_foreground),
+                    contentDescription = null,
+                )
             }
         }
     }
