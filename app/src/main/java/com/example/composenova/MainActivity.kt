@@ -12,12 +12,15 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.BasicText
+import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 import com.example.composenova.ui.theme.ComposeNovaTheme
 
@@ -42,13 +45,21 @@ class MainActivity : ComponentActivity() {
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text(
-                            modifier = Modifier.weight(1f),
-                            text = "Android"
+                        BasicText(
+                            modifier = Modifier,
+                            text = "Android",
+                            maxLines = 1,
+                            autoSize = TextAutoSize.StepBased(
+                                minFontSize = 24.sp, maxFontSize = 36.sp
+                            )
                         )
                         Text(
-                            modifier = Modifier.weight(2f),
-                            text = "Android"
+                            modifier = Modifier,
+                            text = "Android",
+                            maxLines = 1,
+                            autoSize = TextAutoSize.StepBased(
+                                minFontSize = 24.sp, maxFontSize = 36.sp
+                            )
                         )
                     }
                 }
